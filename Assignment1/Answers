@@ -1,0 +1,67 @@
+[gipatil@gipatil python]$ cat script1.py 
+#!/usr/bin/python3
+lst = []
+tpl = ()
+
+print("Enter comma separated number: ")
+numbers = input().split(',')
+
+lst.append(numbers)
+tpl = tuple(numbers)
+
+print("The List: " , lst)
+print("The Tuple: ", tpl)
+
+Answer: 
+
+[gipatil@gipatil python]$ python3 script1.py 
+Enter comma separated number: 
+1,2,3
+The List:  [['1', '2', '3']]
+The Tuple:  ('1', '2', '3')
+
+
+
+[gipatil@gipatil python]$ cat script2.py 
+#!/usr/bin/python3
+from datetime import date
+
+date1 = date(2020, 2, 28)
+date2 = date(2020, 2, 1)
+
+date_diff = date1 - date2
+print("The date difference: ", date_diff)
+
+Answer:
+[gipatil@gipatil python]$ python3 script2.py 
+The date difference:  27 days, 0:00:00
+
+
+[gipatil@gipatil python]$ cat script3.py 
+#!/usr/bin/python
+lst = []
+numbers = [386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345, 399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217, 815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717, 958,743, 527]
+
+for i in numbers:
+    if i == 237:
+      break
+    if i % 2 == 0:
+      lst.append(i)
+      print(lst)
+print("Bye!")
+
+Answer:
+[gipatil@gipatil python]$ python3 script3.py 
+[386]
+[386, 462]
+[386, 462, 418]
+[386, 462, 418, 344]
+[386, 462, 418, 344, 236]
+[386, 462, 418, 344, 236, 566]
+[386, 462, 418, 344, 236, 566, 978]
+[386, 462, 418, 344, 236, 566, 978, 328]
+[386, 462, 418, 344, 236, 566, 978, 328, 162]
+[386, 462, 418, 344, 236, 566, 978, 328, 162, 758]
+[386, 462, 418, 344, 236, 566, 978, 328, 162, 758, 918]
+Bye!
+
